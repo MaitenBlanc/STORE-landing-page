@@ -1,0 +1,427 @@
+:root {
+  --bebas-font: "Bebas Neue", sans-serif;
+  --fjalla-font: "Fjalla One", sans-serif;
+  --color-violet: #ac4db1;
+  --color-gold: gold;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* MENU */
+.menu {
+  display: flex;
+  padding-right: 10em;
+  background-color: #000000;
+  height: 3.5em;
+  justify-content: space-between;
+}
+
+.menu .logo {
+  font-size: 3em;
+}
+
+.menu a {
+  display: flex;
+  color: white;
+  width: fit-content;
+  padding-left: 2em;
+  font-family: var(--bebas-font);
+  font-size: 1em;
+  text-align: center;
+  align-items: center;
+}
+
+nav {
+  float: right;
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 75px;
+  float: left;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+}
+
+nav ul li a,
+h1 a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.9em 0;
+  position: relative;
+}
+
+nav ul li a::before {
+  display: block;
+  content: "";
+  width: 0%;
+  background: white;
+  height: 5px;
+  top: 0;
+  position: absolute;
+  transition: width 0.2s;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+/* BANNER */
+.banner {
+  width: 100%;
+  height: 20em;
+}
+
+/* PRODUCTS */
+.products {
+  padding-top: 2em;
+  margin-bottom: 5em;
+}
+
+.products h1 {
+  font-family: var(--bebas-font);
+  letter-spacing: 0.05em;
+  font-size: 3em;
+  margin-left: 2em;
+  /* padding-top: 2em; */
+}
+
+#products {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+}
+
+.product {
+  min-height: 200px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--color-violet) 0px 2px 5px -1px,
+    var(--color-violet) 0px 1px 3px -1px;
+  cursor: pointer;
+  font-family: var(--fjalla-font);
+  letter-spacing: 0.1em;
+}
+
+.product:hover {
+  box-shadow: #d25959 0px 2px 8px 0px;
+}
+
+.product img {
+  width: 100px;
+  float: left;
+  margin-right: 10px;
+}
+
+.product h2 {
+  font-size: 18px;
+  text-align: center;
+  margin: 1em;
+  color: gray;
+}
+
+.product h3 {
+  margin: 0 1em;
+  font-size: 1.5em;
+}
+
+/* CONTACT */
+.contact {
+  background-image: url("../assets/contact.jpeg");
+  background-size: cover;
+  padding-bottom: 3em;
+  padding-top: 3em;
+}
+
+#contact form {
+  width: 460px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: #fbfbfb75;
+  padding-left: 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#contact input {
+  background-color: #fbfbfbde;
+  width: 408px;
+  height: 40px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--color-violet);
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  font-family: var(--fjalla-font);
+  letter-spacing: 0.1em;
+  font-size: 1em;
+}
+
+#contact textarea {
+  background-color: #fbfbfbde;
+  width: 405px;
+  height: 150px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: var(--color-violet);
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  padding-top: 15px;
+  font-family: var(--fjalla-font);
+  letter-spacing: 0.1em;
+  font-size: 1em;
+}
+
+#contact button {
+  height: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  background-color: var(--color-violet);
+  border-color: var(--color-violet);
+  border-style: solid;
+  border-radius: 10px;
+  width: 420px;
+  cursor: pointer;
+  font-family: var(--fjalla-font);
+  letter-spacing: 0.1em;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+}
+
+#contact span {
+  color: var(--color-violet);
+}
+
+#contact h1 {
+  font-size: 39px;
+  text-align: letf;
+  padding-bottom: 20px;
+  color: var(--color-violet);
+}
+
+#contact h3 {
+  font-size: 16px;
+  padding-bottom: 30px;
+  color: #0e0e0e;
+}
+
+#contact p {
+  font-size: 14px;
+  color: #0e0e0e;
+}
+
+::-webkit-input-placeholder {
+  color: #a8a8a8;
+}
+
+::-webkit-textarea-placeholder {
+  color: #a8a8a8;
+}
+
+#contact input:focus {
+  outline: 0;
+  border: 1px solid var(--color-gold);
+}
+
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid var(--color-gold);
+}
+
+/* FOOTER */
+.footer {
+  background: linear-gradient(to right, #d25959, var(--color-violet));
+  color: #fff;
+  padding: 50px 0;
+  font-family: var(--fjalla-font);
+  letter-spacing: 0.1em;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.column {
+  width: 20%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.logoStore {
+  font-size: 5em;
+}
+
+.column p {
+  font-size: 18px;
+}
+.column h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.column ul li {
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.column img {
+  border-radius: 50%;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+.social-icons a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 30px;
+  transition: transform 0.2s, color 0.2s; /* Added color transition */
+  transition: 0.2s;
+}
+.social-icons a:hover {
+  transform: translateX(-5px);
+  color: #0033ff; /* Light blue color on hover */
+  transition: 0.2s;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s; /* Added color transition */
+}
+a:hover {
+  color: var(--color-gold); /* Change font color to gold on hover */
+  font-weight: 600;
+  transition: 0.2s;
+}
+/* Additional style for copyright section */
+hr {
+  border-top: 1px solid white;
+  width: 50%;
+  margin: 20px auto;
+}
+
+.copyright {
+  text-align: center;
+}
+/* Heartbeat animation for copyright span */
+.copyright span {
+  color: red; /* Change heart color to red */
+  animation: pulse 3s linear infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: rotate(-45deg) scale(1);
+    opacity: 0;
+  } /* 
+  10% { 
+      transform: rotate(-45deg) scale(1.3); 
+  } 
+  20% { 
+      transform: rotate(-45deg) scale(0.9); 
+  } 
+  30% { 
+      transform: rotate(-45deg) scale(1.2); 
+  } 
+  40% { 
+      transform: rotate(-45deg) scale(0.9); 
+  }*/
+  50% {
+    transform: rotate(-45deg) scale(1.3);
+    opacity: 1;
+  } /* 
+  60% { 
+      transform: rotate(-45deg) scale(0.95); 
+  } 
+  70% { 
+      transform: rotate(-45deg) scale(1); 
+  } */
+  100% {
+    transform: rotate(-45deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 330px) and (max-width: 990px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .column {
+    width: calc(50% - 10px); /* Adjusted width to fit two columns with space */
+    margin-bottom: 10px;
+    margin-left: 0px; /* Added margin between columns */
+  }
+
+  .column:nth-child(2) {
+    margin-top: 102px; /* Add margin-top to the second column */
+    margin-left: 20px;
+  }
+
+  .column:last-child {
+    margin-right: 0; /* Remove margin from the last column to prevent extra space */
+  }
+
+  .column:nth-child(5) {
+    width: 100%;
+  }
+
+  .footer-heading-span {
+    margin-left: 0;
+    text-align: center;
+    font-size: 24px; /* Adjusted font size for better visibility */
+  }
+
+  hr {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .column {
+    width: 100%;
+  }
+
+  .footer-heading-span {
+    font-size: 24px;
+  }
+
+  .column:nth-child(5) {
+    width: 100%;
+  }
+  hr {
+    width: 80%;
+  }
+}
