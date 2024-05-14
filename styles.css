@@ -141,7 +141,7 @@ nav ul li a:hover::before {
 
 /* CONTACT */
 .contact {
-  background-image: url("./assets/contact.jpeg");
+  background-image: url("assets/contact.jpeg");
   background-size: cover;
   padding-bottom: 3em;
   padding-top: 3em;
